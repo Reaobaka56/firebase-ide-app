@@ -1,0 +1,23 @@
+{
+  "name": "firebase-ide",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "firebase": "^11.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.13",
+    "vite": "^5.4.20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "create-style": "node -e \"const fs=require('fs'); const path='./src/styles.css'; if(!fs.existsSync('./src')) fs.mkdirSync('./src'); if(!fs.existsSync(path)) fs.writeFileSync(path, '/* Add your styles here */'); console.log('✅ styles.css created in src/');\""
+  }
+}
