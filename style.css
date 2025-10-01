@@ -1,0 +1,53 @@
+/* styles.css - Tailwind-inspired styles */
+
+.bg-gray-900 { background-color: #1a202c; }
+.bg-gray-800 { background-color: #2d3748; }
+.bg-gray-950 { background-color: #0f1115; }
+.text-gray-100 { color: #f7fafc; }
+.text-gray-200 { color: #edf2f7; }
+.text-gray-300 { color: #e2e8f0; }
+.text-gray-400 { color: #cbd5e0; }
+.text-gray-500 { color: #a0aec0; }
+.text-blue-400 { color: #63b3ed; }
+.text-cyan-400 { color: #22d3ee; }
+.text-green-400 { color: #4ade80; }
+.text-white { color: #ffffff; }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-2xl { border-radius: 1rem; }
+.shadow-lg { box-shadow: 0 10px 15px rgba(0,0,0,0.3); }
+.shadow-2xl { box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.flex-grow { flex-grow: 1; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.gap-2 { gap: 0.5rem; }
+.gap-4 { gap: 1rem; }
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 0.75rem; }
+.p-4 { padding: 1rem; }
+.p-8 { padding: 2rem; }
+.m-0 { margin: 0; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.text-sm { font-size: 0.875rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-4xl { font-size: 2.25rem; }
+.text-5xl { font-size: 3rem; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.transition-all { transition: all 0.3s ease-in-out; }
+.transition-colors { transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; }
+.hover\:text-cyan-400:hover { color: #22d3ee; }
+.hover\:bg-gray-700:hover { background-color: #4a5568; }
+.hover\:bg-gray-600:hover { background-color: #718096; }
+.hover\:bg-blue-700:hover { background-color: #2b6cb0; }
+.hover\:from-purple-600:hover { background-color: #7f1dff; } /* gradient approximation */
+.hover\:to-indigo-700:hover { background-color: #4c51bf; }
+.overflow-hidden { overflow: hidden; }
+.overflow-y-auto { overflow-y: auto; }
+.cursor-pointer { cursor: pointer; }
+.cursor-col-resize { cursor: col-resize; }
+.opacity-50 { opacity: 0.5; }
+.opacity-70 { opacity: 0.7; }

@@ -1,0 +1,264 @@
+/* App.css - Converted from Tailwind to normal CSS */
+
+/* --- Global Layout & Base Styles --- /
+body, html {
+margin: 0;
+padding: 0;
+font-family: 'Inter', sans-serif; / Using Inter font for standard IDE look /
+background-color: #0f172a; / bg-slate-900 (user-provided base) /
+color: #e5e7eb; / text-gray-300 */
+display: flex;
+flex-direction: column;
+height: 100vh;
+overflow: hidden;
+}
+
+/* --- Scrollbar Style (Fixes browser side-scroll) --- /
+.custom-scrollbar {
+overflow-y: auto;
+scrollbar-width: thin;
+scrollbar-color: #4b5563 #1f2937;
+}
+.custom-scrollbar::-webkit-scrollbar {
+width: 8px;
+height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+background-color: #4b5563; / Gray-600 /
+border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+background-color: #1f2937; / Gray-800 */
+}
+
+/* --- Panels --- /
+.ide-panel {
+border-radius: 0.5rem; / rounded-lg /
+border: 1px solid #374151; / border-gray-700 /
+background-color: #1f2937; / bg-gray-800 - Base panel color /
+box-shadow: 0 10px 15px rgba(0,0,0,0.3); / shadow-lg */
+overflow: hidden;
+display: flex;
+flex-direction: column;
+position: relative;
+}
+
+.ide-panel-header {
+    padding: 0.75rem;
+    font-weight: bold;
+    font-size: 0.875rem; /* text-sm /
+border-bottom: 1px solid #374151; / border-gray-700 /
+background-color: #111827; / bg-gray-900 /
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: #e5e7eb; / text-gray-200 */
+    flex-shrink: 0;
+}
+
+/* --- Tabs --- /
+.ide-tab {
+padding: 0.5rem 1rem;
+cursor: pointer;
+color: #9ca3af; / text-gray-400 */
+position: relative;
+transition: color 0.2s;
+border-top-left-radius: 0.375rem;
+border-top-right-radius: 0.375rem;
+}
+
+.ide-tab:hover {
+    color: #22d3ee; /* cyan-400 */
+}
+
+.ide-tab-active {
+    /* Slightly transparent background to layer on the panel background /
+    background-color: rgba(31, 41, 55, 0.4); / bg-gray-800/40 /
+    color: #22d3ee; / text-cyan-400 /
+    border-bottom: 2px solid #22d3ee; / border-cyan-400 /
+    margin-bottom: -1px; / Overlap border with panel body */
+}
+
+/* --- Buttons --- */
+.button {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+    border-radius: 9999px;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.button:hover:not(:disabled) {
+    transform: scale(1.05);
+}
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Specific gradient buttons /
+.btn-run {
+background: linear-gradient(to right, #10b981, #0d9488); / Green/Teal */
+color: white;
+}
+.btn-run:hover {
+    background: linear-gradient(to right, #059669, #0f766e);
+}
+
+.btn-save {
+    background: linear-gradient(to right, #3b82f6, #4f46e5); /* Blue/Indigo */
+    color: white;
+}
+.btn-save:hover {
+    background: linear-gradient(to right, #2563eb, #4338ca);
+}
+
+.btn-google {
+    background: linear-gradient(to right, #2563eb, #4f46e5); /* Blue/Indigo */
+    color: white;
+}
+
+.btn-guest {
+    background-color: #4b5563; /* gray-600 /
+color: #e5e7eb;
+}
+.btn-guest:hover {
+background-color: #374151; / gray-700 */
+}
+
+.btn-signout {
+    background-color: #dc2626; /* red-600 /
+color: white;
+}
+.btn-signout:hover {
+background-color: #b91c1c; / red-700 */
+}
+
+/* --- Sidebar --- /
+.sidebar {
+transition: all 0.3s ease-in-out;
+background-color: #111827; / bg-gray-900 /
+border: 1px solid #374151;
+display: flex;
+flex-direction: column;
+height: 100%; / Ensure it takes full height of its container */
+border-radius: 0.5rem;
+}
+
+.sidebar-header {
+    padding: 0.75rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border-bottom: 1px solid #374151;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.sidebar-item {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    color: #d1d5db; /* gray-300 */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.sidebar-item:hover {
+    background-color: #374151; /* gray-700 */
+}
+
+/* --- Console --- /
+.console {
+font-family: monospace;
+font-size: 0.75rem;
+background-color: #111827; / bg-gray-900 */
+flex-grow: 1;
+padding: 0.5rem;
+}
+
+.console p {
+    color: #9ca3af; /* text-gray-400 for standard output /
+border-bottom: 1px solid #1f2937; / border-gray-800 */
+    padding: 2px 0;
+    word-break: break-all;
+}
+
+.console p:last-child {
+    border-bottom: none;
+}
+
+/* Editor textarea /
+.editor-textarea {
+flex-grow: 1;
+padding: 1rem;
+background-color: transparent;
+color: #e5e7eb;
+border: none;
+outline: none;
+resize: none;
+font-family: monospace;
+font-size: 0.875rem;
+line-height: 1.5rem;
+caret-color: #22d3ee; / cyan-400 */
+}
+
+/* --- Modal & Overlay Styles (Added for stability and appearance) --- /
+.modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.85); / Black overlay for better focus /
+backdrop-filter: blur(4px); / Slight blur behind the modal /
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 50; / Ensure it's above everything else */
+padding: 1rem;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #111827; /* bg-gray-900 for the modal body /
+padding: 2rem;
+border-radius: 1rem;
+max-width: 28rem;
+width: 90%; / Responsive width */
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+.modal-title {
+    font-size: 2.25rem; /* text-3xl /
+font-weight: 800; / font-extrabold /
+margin-bottom: 1rem;
+background: linear-gradient(to right, #22d3ee, #6366f1); / Gradient from cyan-400 to indigo-500 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal-p {
+    margin-bottom: 2rem;
+    font-size: 1rem; /* text-lg /
+color: #d1d5db; / text-gray-300 */
+    line-height: 1.5;
+}
+
+.modal-footer {
+    margin-top: 1.5rem;
+    font-size: 0.875rem; /* text-sm /
+color: #9ca3af; / text-gray-400 */
+}
