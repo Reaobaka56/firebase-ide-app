@@ -16,13 +16,7 @@ import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
 
 // Global variables provided by the canvas environment
 const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
-    apiKey: "AIzaSyBqmKHmWXuLjZtFIWS_aNdjv1r_9SHxPas",
-    authDomain: "web-ide-6f8b0.firebaseapp.com",
-    projectId: "web-ide-6f8b0",
-    storageBucket: "web-ide-6f8b0.firebasestorage.app",
-    messagingSenderId: "479851404387",
-    appId: "1:479851404387:web:812bef16222a8d2d8aac56",
-    measurementId: "G-PGLWD094JZ"
+   
 };
 
 const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
